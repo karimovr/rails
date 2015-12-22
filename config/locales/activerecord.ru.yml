@@ -8,9 +8,8 @@ ru:
     delete: "Удалить"
     create: "Создать"
     update: "Изменить"
-  posts:
-    form: '%{action} публикацию'
-    comment: "Отправить"
+
+
   activerecord:
     models:
       admin:

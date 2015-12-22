@@ -8,6 +8,7 @@
     layouts:
       admin:
         categories: "Категории"
+
         users: "Пользователи"
     comment: "Комментировать"
     posts:
@@ -16,3 +17,8 @@
       index:
         new_post: 'Новый пост'
         submit: '%{action} публикацию'
+
+    admin:
+      categories:
+        form:
+          submit: '%{action} категорию'

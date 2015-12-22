@@ -5,6 +5,6 @@
       <%= f.text_area :title %>
     </div>
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit t('.submit', action: @category.new_record? ? t('common.create') : t('common.update') )%>
     </div>
 <% end %>
