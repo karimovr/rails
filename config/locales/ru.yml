@@ -12,6 +12,7 @@
     comment: "Комментировать"
     posts:
       form:
+        submit: '%{action} публикацию'
       index:
         new_post: 'Новый пост'
         submit: '%{action} публикацию'
