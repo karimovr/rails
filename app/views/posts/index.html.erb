@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Список постов</h1>
+
+<td><strong><%= link_to t('.new_post'), new_post_path %></strong></td>
+<%= link_to "Черновики", unpublished_posts_path %>
+
+<table>
+
+
+  <tbody><p>
+
+  <%= render @posts %></p>
+
+
+  </tbody>
+</table>
+
+<br>
+
+
+<br>

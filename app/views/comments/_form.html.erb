@@ -1,0 +1,12 @@
+<%= form_for([@post, @comment]) do |f| %>
+    <%= render 'common/errors', object: @comment %>
+
+  <%# f.collection_select :post, Post.all, :id, :title %>
+    <div class="field">
+
+    <%= f.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit t('comment') %>
+  </div>
+<% end %>

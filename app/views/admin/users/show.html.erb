@@ -1,0 +1,9 @@
+<strong>Title:</strong>
+<%= @user.email %>
+</p>
+<%= render @users %>
+<%= link_to t('common.edit'), edit_admin_user_path(@user) %> |
+<%= link_to t('common.back'), admin_categories_path %>
+<% if current_user && current_user.admin? %>
+    <%= link_to 'Все категории', admin_categories_path %>
+<% end %>

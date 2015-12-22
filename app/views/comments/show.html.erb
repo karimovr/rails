@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+
+  <%= @comment.body %>
+</p>
+
+<%= link_to t('common.edit'), edit_comment_path(@comment) %> |
+<%= link_to t('common.back'), comments_path %>

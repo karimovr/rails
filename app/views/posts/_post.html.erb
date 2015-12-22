@@ -1,0 +1,34 @@
+
+    <table class="table  table-striped table-bordered">
+      <tbody>
+     <h4><strong>
+      <%= link_to post.title, post %>
+     </strong></h4><br>
+       <I><%= post.categories_titles %></I>
+
+    <p>
+    <%= truncate(post.body, length: 200) %><br>
+    <%= link_to 'Читать далее... ', post %></p>
+
+
+  <p><%= link_to t('common.show'), post %></p>
+     <% if user_signed_in? %>
+          <% if current_user.author_of?(post) %>
+            <p><%= link_with_icon :pencil, edit_post_path(post), title: t('common.edit') %>
+            </p>
+
+            <p><%= link_with_icon 'trash-o', post, title: t('common.delete'), method: :delete, data: { confirm: 'Вы уверены?' } %></p>
+          <% end %>
+            <td> <% if current_user.subscribed_to?(post) %>
+            <%= link_to 'Отписаться', current_user.subscription_for(post), method: :delete, notice: "Отписан"%>
+                <% else %>
+            <%= link_to 'Подписаться', post_subscriptions_path(post), method: :post, notice: 'Подписка' %>
+                <% end %>
+      </td>
+
+          <% end %>
+    </tbody>
+
+    </table>
+
+

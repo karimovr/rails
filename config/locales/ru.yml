@@ -1,0 +1,17 @@
+  ru:
+    common:
+      create: 'Создать'
+      update: 'Изменить'
+    welcome:
+      index:
+        title: 'Привет, Rails!'
+    layouts:
+      admin:
+        categories: "Категории"
+        users: "Пользователи"
+    comment: "Комментировать"
+    posts:
+      form:
+      index:
+        new_post: 'Новый пост'
+        submit: '%{action} публикацию'

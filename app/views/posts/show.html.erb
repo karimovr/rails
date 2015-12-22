@@ -1,0 +1,39 @@
+
+<p>
+
+  <h1><%= @post.title %></h1>
+</p>
+<p><strong> Категории:</strong>
+
+<%= @post.categories_titles %>
+
+
+</p>
+<% if @post.user.present? %>
+<p><strong> Автор:</strong>
+
+  <%= @post.user.email %>
+
+
+</p>
+    <% end %>
+<p>
+
+  <%= @post.body %>
+</p>
+<% if @post.comments.empty? %>
+    <h4>комментариев пока нет</h4>
+
+    <% else %>
+    <h3> Комментарии </h3>
+    <% @post.comments.each do |comment| %>
+        <p><%= comment.body %></p>
+        <p><%= link_to "Удалить", comment, method: :delete%></p>
+        <% end %>
+<% end %>
+    <h4>Новый комментарий</h4>
+    <%= render 'comments/form' %>
+
+
+
+<%= link_to t('common.back'), posts_path %>

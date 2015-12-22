@@ -1,0 +1,36 @@
+ru:
+  common:
+    back: "Назад"
+    show: "Показать"
+    exit: "Выход"
+    enter: "Вход"
+    edit: "Редактировать"
+    delete: "Удалить"
+    create: "Создать"
+    update: "Изменить"
+  posts:
+    form: '%{action} публикацию'
+    comment: "Отправить"
+  activerecord:
+    models:
+      admin:
+        categories: "Категории"
+      post: "Публикация"
+
+      categories: "Категория"
+      comments: "Комментарий"
+
+      users: "Пользователи"
+    attributes:
+      post:
+        title: "Заголовок"
+        body: "Содержимое"
+        categories: "Категории"
+
+      category:
+        title: "Название"
+    errors:
+      messages:
+        blank: "не может быть пустым"
+  comments:
+    title: "Новый комментарий"

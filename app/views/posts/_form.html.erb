@@ -1,0 +1,28 @@
+<%= form_for(@post) do |f| %>
+   <%= render 'common/errors', object: @post %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </div>
+
+    <div class="field">
+      <%= f.label :published, 'Опубликовать' %><br>
+      <%= f.check_box :published %>
+
+
+    <div class="field">
+      <%= f.label :category_ids, "Категории" %><br>
+      <%= f.collection_select :category_ids, Category.all, :id, :title, {}, { multiple: true} %>
+
+    </div>
+
+
+    <div class="actions">
+    <%= f.submit t('.submit', action: @post.new_record? ? t('common.create') : t('common.update') )%>
+  </div>
+<% end %>
