@@ -13,8 +13,8 @@
       <tr>
         <td><%= user.email %></td>
 
-        <td><%= link_to t('common.edit'), edit_admin_user_path(user) %></td>
-        <td><%= link_to t('common.delete'), [ :admin, user], method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+        <td><%= link_with_icon :pencil, edit_admin_user_path(user), title: t('common.edit') %></td>
+        <td><%= link_with_icon 'trash-o', [ :admin, user], title: t('common.delete'),  method: :delete, data: { confirm: 'Вы уверены?' } %></td>
       </tr>
   <% end %>
   </tbody>

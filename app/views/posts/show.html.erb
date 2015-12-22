@@ -28,7 +28,7 @@
     <h3> Комментарии </h3>
     <% @post.comments.each do |comment| %>
         <p><%= comment.body %></p>
-        <p><%= link_to "Удалить", comment, method: :delete%></p>
+        <p><%= link_with_icon 'trash-o' , comment, title: t('common.delete'), method: :delete %></p>
         <% end %>
 <% end %>
     <h4>Новый комментарий</h4>
