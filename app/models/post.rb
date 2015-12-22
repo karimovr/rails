@@ -13,10 +13,12 @@ class Post < ActiveRecord::Base
   scope :published, -> { where(published: true) }
   scope :unpublished, -> { where(published: false) }
 
-  after_create :subscribed_auhtor
+  after_create :subscribed_author
 
 
-public
+
+
+  public
  def categories_titles
   #categories.map(&:title).join ', '
   categories.pluck(:title).join ', '
@@ -24,7 +26,7 @@ public
 
   protected
 
-  def subscribe_author
+  def subscribed_author
     user.subscribe_to(self)
   end
 end
